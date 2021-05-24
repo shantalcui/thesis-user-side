@@ -18,11 +18,13 @@
   border: none !important;
   border: none !important;
   outline: none !important;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .navbar-toggler .fa {
   color: #ffffff;
-  font-size: 26px;
+  font-size: 20px;
 }
 
 .nav-link:hover {
@@ -50,11 +52,11 @@
 
 .fas,
 .fa {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .tab {
-  overflow: hidden;
+  overflow: auto;
   padding: 5px;
   background-color: #fff;
 }
@@ -68,7 +70,7 @@
   cursor: pointer;
   padding: 10px 16px;
   transition: 0.3s;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 /* Change background color of buttons on hover */
@@ -108,13 +110,12 @@
   max-width: 40rem;
 }
 
-.pagination .active {
-  fill: darkred;
-  color: white;
-}
-
 .container .fab {
   font-size: 26px;
+}
+
+.tab button {
+  font-size: 14px;
 }
 
 .card:hover {
