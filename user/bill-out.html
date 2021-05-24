@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <title>Don Covido's | Bill Out</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/checkout/">
+
+    <!-- Bootstrap core CSS -->
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
+  </head>
+  
+  <body class="bg-dark text-white">
+  <header>
+  <nav class="navbar navbar-expand-md fixed-top bg-dark">
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" 
+		aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle Navigation">
+		  <i class="fas fa-bars"></i>
+	  </button>
+	  
+	  <a class="navbar-brand text-white" href="#">Don Covido's</a>
+	  <div class="collapse navbar-collapse" id="navbarMenu">
+	    <ul class="navbar-nav mx-auto">
+		  <li class="nav-item">
+			<a class="nav-link text-white" href="../menu/menu1.html">Menu</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link text-white" href="../about/about.html">About</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link text-white" href="../about/contact.html">Contact Us</a>
+		  </li>
+		</ul>
+	  </div>
+	
+	  <div class="d-block">
+	    <a href="../cart/cart.html">
+	      <i class="fa fa-shopping-cart text-white mr-0"></i>
+		  <sup class="badge badge-pill badge-danger">0</sup>
+	    </a>
+	  </div>
+	  
+	    <a href="../cart/bill-out.html">
+		  <span class="mx-3"><i class="fas fa-credit-card text-white"></i></span>
+	    </a>
+		
+	  <div class="dropdown">
+	    <button type="submit" class="btn btn-dark" data-toggle="dropdown" data-target=".dropdown-menu">
+		  <i class="fas fa-user-circle text-white"></i>
+	    </button>
+	  </div>
+	
+	  <div class="dropdown-menu dropdown-menu-right bg-dark">
+	    <h6 class="dropdown-header text-white">Customer's Username</h6>
+		<div class="dropdown-divider"></div>
+		<a class="dropdown-item text-light" href="#">Logout<a>
+	  </div>
+	</nav>
+</header>
+  
+    <div class="container">
+  <div class="py-5 text-center">
+    <h1 class="mt-5">BILL OUT</h1>
+	<h2 class="text-muted">ORDER SUMMARY</h2>
+  </div>
+
+  <div class="row text-dark">
+    <div class="col-11 col-md-8 mx-auto">
+      <ul class="list-group mb-3">
+      <!-- HEADER -->
+        <li class="row list-group-item d-none d-md-flex justify-content-between lh-condensed">
+          <div class="col-5">
+            <h6 class="my-0 text-left">Order</h6>
+          </div>
+          <div class="col-2">
+            <h6 class="my-0 text-right">Unit Price</h6>
+          </div>
+          <div class="col-1">
+            <h6 class="my-0 ml-3 ml-md-4">Qty</h6>
+          </div>
+          <div class="col-2">
+            <h6 class="my-0 text-md-right">Total</h6>
+          </div>
+        </li>
+	    <!-- ITEM 1 -->
+      <li class="row list-group-item d-flex lh-condensed">
+        <div class="item-img">
+		      <img src="../images/sweet-n-sour.png" width="100" height="auto">
+        </div>
+
+        <div class="item-desc">
+            <div class="item-name">Sweet n Sour Fish Fillet</div>
+            <div class="item-price">Php 12.00</div>
+            <div class="item-qty">1
+            </div>
+            <div class="item-total">Php 12.00</div>
+        </div>
+      </li>
+		  <!-- ITEM 2 -->
+      <li class="row list-group-item d-flex lh-condensed">
+        <div class="item-img">
+		      <img src="../images/sweet-n-sour.png" width="100" height="auto">
+        </div>
+
+        <div class="item-desc">
+            <div class="item-name">Sweet n Sour Fish Fillet</div>
+            <div class="item-price">Php 12.00</div>
+            <div class="item-qty">1
+            </div>
+            <div class="item-total">Php 12.00</div>
+        </div>
+      </li>
+      <!-- ITEM 3 -->
+      <li class="row list-group-item d-flex lh-condensed">
+        <div class="item-img">
+		      <img src="../images/sweet-n-sour.png" width="100" height="auto">
+        </div>
+
+        <div class="item-desc">
+            <div class="item-name">Sweet n Sour Fish Fillet</div>
+            <div class="item-price">Php 12.00</div>
+            <div class="item-qty">1
+            </div>
+            <div class="item-total">Php 12.00</div>
+        </div>
+      </li>
+
+        <li class="row list-group-item d-flex justify-content-between">
+          <strong class="col">SubTotal</strong>
+          <strong class="col text-right">Php 20.00</strong>
+        </li>
+      </ul>
+
+      <div class="row">
+	    <button type="submit" class="btn btn-danger font-weight-bold col-12" onclick="note()">BILL OUT</button>
+	  </div>
+
+
+	<script>
+	  function note() {
+		var txt;
+		if (confirm("NOTE: After paying for your meal, you will be given 5mins as an after-meal break. After the given time limit, the table will appear as vacant in our system. Proceed to bill out?")) {
+			document.location='../cart/receipt.html';
+		}
+	  }
+	</script>
+
+
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2020 Don Covido's</p>
+  </footer>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="form-validation.js"></script></body>
+</html>
