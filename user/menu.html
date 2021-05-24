@@ -99,13 +99,11 @@
 
 <!-- MENU TABS -->
 <div class="d-flex justify-content-center">
-  <ul class="nav nav-tabs nav-justified">
-    <li class="active"><a data-toggle="tab" href="#rice">Rice Bowls</a></li>
-    <li><a data-toggle="tab" href="#combo">Combo Meals</a></li>
-    <li><a data-toggle="tab" href="#group">Group Meals</a></li>
-    <li><a data-toggle="tab" href="#dessert">Desserts</a></li>
-    <li><a data-toggle="tab" href="#drinks">Drinks</a></li>
-  </ul>
+  <div class="tab">
+    <button class="tablinks" onclick="openMenu(event, 'rice')">Rice Bowls</button>
+    <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+    <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+  </div>
 </div>
   
   
@@ -113,201 +111,50 @@
 <div class="album py-5">
   <div class="container">
   <!-- RICE BOWL TAB -->  
-    <div class="tab-content">
+    <div class="tab-content" id="rice">
         <div class="row">
           <!-- SWEET N SOUR -->
-          <div class="tab-pane" id="rice">
-            <div class="row">
-              <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                  <img src="images/sweet-n-sour.png" width="100%" height="auto">
-                  <div class="card-body">
-                    <h4 class="card-text">Sweet N Sour Fish Fillet Rice Bowl</h4>
-                    <p class="card-text">Php 197.00</p>
-              <div class="form-group mb-3">
-                <label for="qty">Qty:</label>
-                <input type="number" name="qty" min="1" max="5">
-              </div>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group mx-auto">
-                        <button type="button" class="btn btn-danger col-12">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
-                      </div>
-                    </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img src="images/sweet-n-sour.png" width="100%" height="auto">
+                <div class="card-body">
+                  <h4 class="card-text">Sweet N Sour Fish Fillet Rice Bowl</h4>
+                  <p class="card-text">Php 197.00</p>
+                  <div class="form-group mb-3">
+                    <label for="qty">Qty:</label>
+                    <input type="number" name="qty" min="1" max="5">
                   </div>
-                </div>
-              </div>
-    
-              <!-- TOFU -->
-              <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                  <img src="images/tofu.png" width="100%" height="auto">
-                  <div class="card-body">
-                    <h4 class="card-text">Tofu Rice Bowl</h4>
-                    <p class="card-text">Php 197.00</p>
-              <div class="form-group mb-3">
-                <label for="qty">Qty:</label>
-                <input type="number" name="qty" min="1" max="5">
-              </div>
-                    <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group mx-auto">
-                        <button type="button" class="btn btn-danger col-12">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
-                      </div>
+                      <button type="button" class="btn btn-danger col-12" onclick="cartMsg()">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
                     </div>
                   </div>
                 </div>
               </div>
-    
-              <!-- SHANGHAI -->
-              <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                  <img src="images/shanghai.png" width="100%" height="auto">
-                  <div class="card-body">
-                    <h4 class="card-text">Shanghai Rice Bowl</h4>
-                    <p class="card-text">Php 175.00</p>
-              <div class="form-group mb-3">
-                <label for="qty">Qty:</label>
-                <input type="number" name="qty" min="1" max="5">
-              </div>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group mx-auto">
-                        <button type="button" class="btn btn-danger col-12">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
-                      </div>
+            </div>
+
+          <!-- TOFU -->
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img src="images/tofu.png" width="100%" height="auto">
+                <div class="card-body">
+                  <h4 class="card-text">Tofu Rice Bowl</h4>
+                  <p class="card-text">Php 197.00</p>
+                  <div class="form-group mb-3">
+                    <label for="qty">Qty:</label>
+                    <input type="number" name="qty" min="1" max="5">
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group mx-auto">
+                      <button type="button" class="btn btn-danger col-12" onclick="cartMsg()">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
                     </div>
                   </div>
                 </div>
               </div>
-    
-              <!-- CHICKEN SISIG -->
-              <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                  <img src="images/chicken-sisig.png" width="100%" height="auto">
-                  <div class="card-body">
-                    <h4 class="card-text">Chicken Sisig Rice Bowl</h4>
-                    <p class="card-text">Php 197.00</p>
-              <div class="form-group mb-3">
-                <label for="qty">Qty:</label>
-                <input type="number" name="qty" min="1" max="5">
-              </div>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group mx-auto">
-                        <button type="button" class="btn btn-danger col-12">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> <!-- end ROW -->
-          </div><!-- end TAB -->
-        </div>
+            </div>
 
-
-
-
-    <!-- COMBO MEALS TAB -->
-      <div id="combo" class="tab-pane fade">
-        <div class class="row">
-          <!-- PLATTER MEAL -->
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <img src="images/platter-meal.png" width="100%" height="auto">
-              <div class="card-body">
-                <h4 class="card-text">Platter Meal</h4>
-                <p class="card-text">Php 351.00</p>
-          <div class="form-group mb-3">
-            <label for="qty">Qty:</label>
-            <input type="number" name="qty" min="1" max="5">
-          </div>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group mx-auto">
-                    <button type="button" class="btn btn-danger col-12">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-    
-          <!-- FIESTA -->
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <img src="images/fiesta.png" width="100%" height="auto">
-              <div class="card-body">
-                <h4 class="card-text">Fiesta Plate Meal</h4>
-                <p class="card-text">Php 351.00</p>
-          <div class="form-group mb-3">
-            <label for="qty">Qty:</label>
-            <input type="number" name="qty" min="1" max="5">
-          </div>
-                <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group mx-auto">
-                    <button type="button" class="btn btn-danger col-12">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-    
-          <!-- SUPER SOLO MEAL -->
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <img src="images/super-solo-meal.jpg" width="100%" height="auto">
-              <div class="card-body">
-                <h4 class="card-text">Super Solo Meal</h4>
-                <p class="card-text">Php 395.00</p>
-          <div class="form-group mb-3">
-            <label for="qty">Qty:</label>
-            <input type="number" name="qty" min="1" max="5">
-          </div>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group mx-auto">
-                    <button type="button" class="btn btn-danger col-12">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- BEST PLATE -->
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <img src="images/best-plate.png" width="100%" height="auto">
-              <div class="card-body">
-                <h4 class="card-text">Best Plate</h4>
-                <p class="card-text">Php 395.00</p>
-          <div class="form-group mb-3">
-            <label for="qty">Qty:</label>
-            <input type="number" name="qty" min="1" max="5">
-          </div>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group mx-auto">
-                    <button type="button" class="btn btn-danger col-12">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-    
-          <!-- BASIC MEAL -->
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <img src="images/basic-meal.png" width="100%" height="auto">
-              <div class="card-body">
-                <h4 class="card-text">Basic Meal</h4>
-                <p class="card-text">Php 230.00</p>
-          <div class="form-group mb-3">
-            <label for="qty">Qty:</label>
-            <input type="number" name="qty" min="1" max="5">
-          </div>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group mx-auto">
-                    <button type="button" class="btn btn-danger col-12">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>
-      </div><!-- end ROW -->
-    </div>
+        </div> <!-- end ROW -->
+      </div> <!-- end TAB CONTENT -->
 
 
 
@@ -597,4 +444,5 @@
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
       <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="js/main.js"></script>
 </html>
