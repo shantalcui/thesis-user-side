@@ -65,12 +65,12 @@
           </div>
 	  
           <a href="bill-out.html">
-            <span class="mx-3 text-white"><i class="fa fa-credit-card"></i></span>
+            <span class="mx-3 text-white"><i class="fa fa-credit-card-alt text-white"></i></span>
           </a>
 		
           <div class="dropdown">
             <button type="submit" class="btn btn-dark" data-toggle="dropdown" data-target=".dropdown-menu">
-              <i class="fa fa-user-circle-o"></i>
+              <i class="fa fa-user-circle text-white"></i>
             </button>
           </div>
 	  
@@ -90,7 +90,7 @@
 <!-- TITLE -->
   <section class="jumbotron text-center bg-danger">
     <div class="container">
-      <h1 class="text-white mt-5 mb-md-n5 mt-md-3">RICE BOWLS</h1>
+      <h1 class="text-white mt-5 mb-md-n5 mt-md-3">MENU</h1>
       <p class="lead text-muted"></p>
     </div>
   </section>
@@ -100,9 +100,11 @@
 <!-- MENU TABS -->
 <div class="d-flex justify-content-center">
   <div class="tab">
-    <button class="tablinks" onclick="openMenu(event, 'rice')">Rice Bowls</button>
-    <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-    <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+    <button class="tablinks" onclick="openMenu(event, 'rice')" id="defaultOpen">Rice Bowls</button>
+    <button class="tablinks" onclick="openMenu(event, 'combo')">Combo Meals</button>
+    <button class="tablinks" onclick="openMenu(event, 'group')">Group Meals</button>
+    <button class="tablinks" onclick="openMenu(event, 'desserts')">Desserts</button>
+    <button class="tablinks" onclick="openMenu(event, 'drinks')">Drinks</button>
   </div>
 </div>
   
@@ -153,263 +155,458 @@
               </div>
             </div>
 
+          <!-- SHANGHAI -->
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img src="images/shanghai.png" width="100%" height="auto">
+                <div class="card-body">
+                  <h4 class="card-text">Shanghai Rice Bowl</h4>
+                  <p class="card-text">Php 175.00</p>
+                  <div class="form-group mb-3">
+                    <label for="qty">Qty:</label>
+                    <input type="number" name="qty" min="1" max="5">
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group mx-auto">
+                      <button type="button" class="btn btn-danger col-12" onclick="cartMsg()">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <!-- CHICKEN SISIG -->
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img src="images/chicken-sisig.png" width="100%" height="auto">
+                <div class="card-body">
+                  <h4 class="card-text">Chicken Sisig Rice Bowl</h4>
+                  <p class="card-text">Php 197.00</p>
+            <div class="form-group mb-3">
+              <label for="qty">Qty:</label>
+              <input type="number" name="qty" min="1" max="5">
+            </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group mx-auto">
+                      <button type="button" class="btn btn-danger col-12" onclick="cartMsg()">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
         </div> <!-- end ROW -->
       </div> <!-- end TAB CONTENT -->
 
 
-
-
-
-    <!-- GROUP MEALS TAB -->
-      <div id="group" class="tab-pane fade">
+    <!-- COMBO MEALS TAB -->  
+      <div class="tab-content" id="combo">
         <div class="row">
-    <!-- BILAO TRIO 1 -->
-          <!--        <?php      /*     
-      $i=$row['id']='9';
-      for ($row['id']=0; $row['id'] <50; $row['id']++) {
-      if ($row['id'] == $i) {
-      while ($row = mysqli_fetch_assoc($_SESSION['getdata'])) {
-        component($row['pimage'], $row['pname'], $row['pprice'], $row['id']);
-              break;}
-            }
-      }
-*/?>  -->
-    
-    <!-- BILAO TRIO 2 -->
-        <!--        <?php      /*     
-      $i=$row['id']='9';
-      for ($row['id']=0; $row['id'] <50; $row['id']++) {
-      if ($row['id'] == $i) {
-      while ($row = mysqli_fetch_assoc($_SESSION['getdata'])) {
-        component($row['pimage'], $row['pname'], $row['pprice'], $row['id']);
-              break;}
-            }
-      }
-*/?>  -->
-    
-    <!-- BUNDLE 1 -->
-        <!--        <?php      /*     
-      $i=$row['id']='9';
-      for ($row['id']=0; $row['id'] <50; $row['id']++) {
-      if ($row['id'] == $i) {
-      while ($row = mysqli_fetch_assoc($_SESSION['getdata'])) {
-        component($row['pimage'], $row['pname'], $row['pprice'], $row['id']);
-              break;}
-            }
-      }
-*/?>  -->
-    
-    <!-- BUNDLE 2 -->
-        <!--        <?php      /*     
-      $i=$row['id']='9';
-      for ($row['id']=0; $row['id'] <50; $row['id']++) {
-      if ($row['id'] == $i) {
-      while ($row = mysqli_fetch_assoc($_SESSION['getdata'])) {
-        component($row['pimage'], $row['pname'], $row['pprice'], $row['id']);
-              break;}
-            }
-      }
-*/?>  -->
-    
-    <!-- BUNDLE 3 -->
-        <!--        <?php      /*     
-      $i=$row['id']='9';
-      for ($row['id']=0; $row['id'] <50; $row['id']++) {
-      if ($row['id'] == $i) {
-      while ($row = mysqli_fetch_assoc($_SESSION['getdata'])) {
-        component($row['pimage'], $row['pname'], $row['pprice'], $row['id']);
-              break;}
-            }
-      }
-*/?>  -->
-    
-    <!-- BUNDLE 4 -->
-        <!--        <?php      /*     
-      $i=$row['id']='9';
-      for ($row['id']=0; $row['id'] <50; $row['id']++) {
-      if ($row['id'] == $i) {
-      while ($row = mysqli_fetch_assoc($_SESSION['getdata'])) {
-        component($row['pimage'], $row['pname'], $row['pprice'], $row['id']);
-              break;}
-            }
-      }
-*/?>  -->
-    
-    <!-- BUNDLE 5 -->
-        <!--        <?php      /*     
-      $i=$row['id']='9';
-      for ($row['id']=0; $row['id'] <50; $row['id']++) {
-      if ($row['id'] == $i) {
-      while ($row = mysqli_fetch_assoc($_SESSION['getdata'])) {
-        component($row['pimage'], $row['pname'], $row['pprice'], $row['id']);
-              break;}
-            }
-      }
-*/?>  -->
-    
-    <!-- BUNDLE 6 -->
-        <!--        <?php      /*     
-      $i=$row['id']='9';
-      for ($row['id']=0; $row['id'] <50; $row['id']++) {
-      if ($row['id'] == $i) {
-      while ($row = mysqli_fetch_assoc($_SESSION['getdata'])) {
-        component($row['pimage'], $row['pname'], $row['pprice'], $row['id']);
-              break;}
-            }
-      }
-*/?>  -->
-    
-    <!-- BUNDLE 7 -->
-        <!--        <?php      /*     
-      $i=$row['id']='9';
-      for ($row['id']=0; $row['id'] <50; $row['id']++) {
-      if ($row['id'] == $i) {
-      while ($row = mysqli_fetch_assoc($_SESSION['getdata'])) {
-        component($row['pimage'], $row['pname'], $row['pprice'], $row['id']);
-              break;}
-            }
-      }
-*/?>  -->
+          <!-- PLATTER MEAL -->
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img src="images/platter-meal.png" width="100%" height="auto">
+                <div class="card-body">
+                  <h4 class="card-text">Platter Meal</h4>
+                  <p class="card-text">Php 351.00</p>
+                  <div class="form-group mb-3">
+                    <label for="qty">Qty:</label>
+                    <input type="number" name="qty" min="1" max="5">
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group mx-auto">
+                      <button type="button" class="btn btn-danger col-12">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-        </div>
-      </div><!-- end ROW -->
-    
+          <!-- FIESTA -->
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img src="images/fiesta.png" width="100%" height="auto">
+                <div class="card-body">
+                  <h4 class="card-text">Fiesta Plate Meal</h4>
+                  <p class="card-text">Php 351.00</p>
+                  <div class="form-group mb-3">
+                    <label for="qty">Qty:</label>
+                    <input type="number" name="qty" min="1" max="5">
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group mx-auto">
+                      <button type="button" class="btn btn-danger col-12">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
+          <!-- SUPER SOLO MEAL -->
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img src="images/super-solo-meal.jpg" width="100%" height="auto">
+                <div class="card-body">
+                  <h4 class="card-text">Super Solo Meal</h4>
+                  <p class="card-text">Php 395.00</p>
+                  <div class="form-group mb-3">
+                    <label for="qty">Qty:</label>
+                    <input type="number" name="qty" min="1" max="5">
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group mx-auto">
+                      <button type="button" class="btn btn-danger col-12">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
+          <!-- BEST PLATE -->
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img src="images/best-plate.png" width="100%" height="auto">
+                <div class="card-body">
+                  <h4 class="card-text">Best Plate</h4>
+                  <p class="card-text">Php 395.00</p>
+                  <div class="form-group mb-3">
+                    <label for="qty">Qty:</label>
+                    <input type="number" name="qty" min="1" max="5">
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group mx-auto">
+                      <button type="button" class="btn btn-danger col-12">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
+          <!-- BASIC MEAL -->
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img src="images/basic-meal.png" width="100%" height="auto">
+                <div class="card-body">
+                  <h4 class="card-text">Basic Meal</h4>
+                  <p class="card-text">Php 230.00</p>
+            <div class="form-group mb-3">
+              <label for="qty">Qty:</label>
+              <input type="number" name="qty" min="1" max="5">
+            </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group mx-auto">
+                      <button type="button" class="btn btn-danger col-12">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-    <!-- DESSERT TAB -->
-      <div id="dessert" class="tab-pane fade">
-        <div class="row">
+        </div> <!-- end ROW -->
+      </div> <!-- end TAB CONTENT -->
+
+    <!-- COMBO MEALS TAB -->  
+    <div class="tab-content" id="group">
+      <div class="row">
+        <!-- BILAO TRIO 1 -->
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img src="images/bilao-trio-1.jpg" width="100%" height="auto">
+              <div class="card-body">
+                <h4 class="card-text">Bilao Trio 1</h4>
+                <p class="card-text">Php 1,429.00</p>
+                <div class="form-group mb-3">
+                  <label for="qty">Qty:</label>
+                  <input type="number" name="qty" min="1" max="5">
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group mx-auto">
+                    <button type="button" class="btn btn-danger col-12">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- BILAO TRIO 2 -->
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img src="images/bilao-trio-2.jpg" width="100%" height="auto">
+              <div class="card-body">
+                <h4 class="card-text">Bilao Trio 2</h4>
+                <p class="card-text">Php 1,539.00</p>
+                <div class="form-group mb-3">
+                  <label for="qty">Qty:</label>
+                  <input type="number" name="qty" min="1" max="5">
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group mx-auto">
+                    <button type="button" class="btn btn-danger col-12">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+
+        <!-- BUNDLE 1 -->
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img src="images/bundle-1.png" width="100%" height="auto">
+              <div class="card-body">
+                <h4 class="card-text">All-In-One Bundle 1</h4>
+                <p class="card-text">Php 1,053.00</p>
+                <div class="form-group mb-3">
+                  <label for="qty">Qty:</label>
+                  <input type="number" name="qty" min="1" max="5">
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group mx-auto">
+                    <button type="button" class="btn btn-danger col-12">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- BUNDLE 2 -->
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img src="images/bundle-2.png" width="100%" height="auto">
+              <div class="card-body">
+                <h4 class="card-text">All-In-One Bundle 2</h4>
+                <p class="card-text">Php 1,151.70</p>
+                <div class="form-group mb-3">
+                  <label for="qty">Qty:</label>
+                  <input type="number" name="qty" min="1" max="5">
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group mx-auto">
+                    <button type="button" class="btn btn-danger col-12">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- BUNDLE 3 -->
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img src="images/bundle-3.png" width="100%" height="auto">
+              <div class="card-body">
+                <h4 class="card-text">All-In-One Bundle 3</h4>
+                <p class="card-text">Php 1,063.70</p>
+                <div class="form-group mb-3">
+                  <label for="qty">Qty:</label>
+                  <input type="number" name="qty" min="1" max="5">
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group mx-auto">
+                    <button type="button" class="btn btn-danger col-12">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- BUNDLE 4 -->
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img src="images/bundle-4.jpg" width="100%" height="auto">
+              <div class="card-body">
+                <h4 class="card-text">All-In-One Bundle 4</h4>
+                <p class="card-text">Php 1,230.00</p>
+                <div class="form-group mb-3">
+                  <label for="qty">Qty:</label>
+                  <input type="number" name="qty" min="1" max="5">
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group mx-auto">
+                    <button type="button" class="btn btn-danger col-12">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- BUNDLE 5 -->
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img src="images/bundle-5.jpg" width="100%" height="auto">
+              <div class="card-body">
+                <h4 class="card-text">All-In-One Bundle 5</h4>
+                <p class="card-text">Php 1,270.00</p>
+                <div class="form-group mb-3">
+                  <label for="qty">Qty:</label>
+                  <input type="number" name="qty" min="1" max="5">
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group mx-auto">
+                    <button type="button" class="btn btn-danger col-12">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- BUNDLE 6 -->
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img src="images/bundle-6.JPG" width="100%" height="auto">
+              <div class="card-body">
+                <h4 class="card-text">All-In-One Bundle 6</h4>
+                <p class="card-text">Php 1,260.00</p>
+                <div class="form-group mb-3">
+                  <label for="qty">Qty:</label>
+                  <input type="number" name="qty" min="1" max="5">
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group mx-auto">
+                    <button type="button" class="btn btn-danger col-12">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+
+          <!-- BUNDLE 7 -->
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img src="images/bundle-6.JPG" width="100%" height="auto">
+                <div class="card-body">
+                  <h4 class="card-text">All-In-One Bundle 6</h4>
+                  <p class="card-text">Php 1,260.00</p>
+                  <div class="form-group mb-3">
+                    <label for="qty">Qty:</label>
+                    <input type="number" name="qty" min="1" max="5">
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group mx-auto">
+                      <button type="button" class="btn btn-danger col-12">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+      </div> <!-- end ROW -->
+    </div> <!-- end TAB CONTENT -->
+
+    <div class="tab-content" id="desserts">
+      <div class="row">
         <!-- HALO HALO -->
-          <!--        <?php      /*     
-      $i=$row['id']='9';
-      for ($row['id']=0; $row['id'] <50; $row['id']++) {
-      if ($row['id'] == $i) {
-      while ($row = mysqli_fetch_assoc($_SESSION['getdata'])) {
-        component($row['pimage'], $row['pname'], $row['pprice'], $row['id']);
-              break;}
-            }
-      }
-*/?>  -->
-    
-        <!-- LECHE FLAN -->
-          <!--        <?php      /*     
-      $i=$row['id']='9';
-      for ($row['id']=0; $row['id'] <50; $row['id']++) {
-      if ($row['id'] == $i) {
-      while ($row = mysqli_fetch_assoc($_SESSION['getdata'])) {
-        component($row['pimage'], $row['pname'], $row['pprice'], $row['id']);
-              break;}
-            }
-      }
-*/?>  -->
-
-        </div><!-- end ROW -->
-      </div>
-
-
-
-
-      <!-- DRINKS TAB -->
-      <div id="drinks" class="tab-pane fade">
-        <div class="row">
-    <!-- WATER -->
-        <!--        <?php      /*     
-      $i=$row['id']='9';
-      for ($row['id']=0; $row['id'] <50; $row['id']++) {
-      if ($row['id'] == $i) {
-      while ($row = mysqli_fetch_assoc($_SESSION['getdata'])) {
-        component($row['pimage'], $row['pname'], $row['pprice'], $row['id']);
-              break;}
-            }
-      }
-*/?>  -->
-
-    <!-- PEPSI -->
-        <!--        <?php      /*     
-      $i=$row['id']='9';
-      for ($row['id']=0; $row['id'] <50; $row['id']++) {
-      if ($row['id'] == $i) {
-      while ($row = mysqli_fetch_assoc($_SESSION['getdata'])) {
-        component($row['pimage'], $row['pname'], $row['pprice'], $row['id']);
-              break;}
-            }
-      }
-*/?>  -->
-
-    <!-- DIET PEPSI -->
-        <!--        <?php      /*     
-      $i=$row['id']='9';
-      for ($row['id']=0; $row['id'] <50; $row['id']++) {
-      if ($row['id'] == $i) {
-      while ($row = mysqli_fetch_assoc($_SESSION['getdata'])) {
-        component($row['pimage'], $row['pname'], $row['pprice'], $row['id']);
-              break;}
-            }
-      }
-*/?>  -->
-    
-    <!-- 1.5 LITRE -->
-        <!--        <?php      /*     
-      $i=$row['id']='9';
-      for ($row['id']=0; $row['id'] <50; $row['id']++) {
-      if ($row['id'] == $i) {
-      while ($row = mysqli_fetch_assoc($_SESSION['getdata'])) {
-        component($row['pimage'], $row['pname'], $row['pprice'], $row['id']);
-              break;}
-            }
-      }
-*/?>  -->
-
-    <!-- 1.5 LITRE DIET -->
-        <!--        <?php      /*     
-      $i=$row['id']='9';
-      for ($row['id']=0; $row['id'] <50; $row['id']++) {
-      if ($row['id'] == $i) {
-      while ($row = mysqli_fetch_assoc($_SESSION['getdata'])) {
-        component($row['pimage'], $row['pname'], $row['pprice'], $row['id']);
-              break;}
-            }
-      }
-*/?>  -->
-    
-    <!-- ORANGE -->
-        <!--        <?php      /*     
-      $i=$row['id']='9';
-      for ($row['id']=0; $row['id'] <50; $row['id']++) {
-      if ($row['id'] == $i) {
-      while ($row = mysqli_fetch_assoc($_SESSION['getdata'])) {
-        component($row['pimage'], $row['pname'], $row['pprice'], $row['id']);
-              break;}
-            }
-      }
-*/?>  -->
-
-    <!-- MANGO -->
-        <!--        <?php      /*     
-      $i=$row['id']='9';
-      for ($row['id']=0; $row['id'] <50; $row['id']++) {
-      if ($row['id'] == $i) {
-      while ($row = mysqli_fetch_assoc($_SESSION['getdata'])) {
-        component($row['pimage'], $row['pname'], $row['pprice'], $row['id']);
-              break;}
-            }
-      }
-*/?>  -->
-
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="images/Halo Halo.png" width="100%" height="auto">
+            <div class="card-body">
+              <h4 class="card-text">Halo Halo</h4>
+              <p class="card-text">Php 175.00</p>
+              <div class="form-group mb-3">
+                <label for="qty">Qty:</label>
+                <input type="number" name="qty" min="1" max="5">
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group mx-auto">
+                  <button type="button" class="btn btn-danger col-12">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div><!-- end ROW -->
 
+      <!-- LECHE FLAN -->
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="images/Leche Flan.png" width="100%" height="auto">
+            <div class="card-body">
+              <h4 class="card-text">Leche Flan</h4>
+              <p class="card-text">Php 137.00</p>
+              <div class="form-group mb-3">
+                <label for="qty">Qty:</label>
+                <input type="number" name="qty" min="1" max="5">
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+               <div class="btn-group mx-auto">
+                  <button type="button" class="btn btn-danger col-12">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- end ROW -->
+    </div> <!-- end TAB CONTENT -->
+
+    <div class="tab-content" id="drinks">
+      <div class="row">
+        <!-- PEPSI -->
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img src="images/softdrink.jpg" width="45%" height="auto" class="mx-auto">
+              <div class="card-body">
+                <h4 class="card-text">Softdrink</h4>
+                <p class="card-text">Php 98.00</p>
+                <div class="form-group mb-3">
+                  <label for="qty">Qty:</label>
+                  <input type="number" name="qty" min="1" max="5">
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group mx-auto">
+                    <button type="button" class="btn btn-danger col-12">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- 1.5 LITRE -->
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img src="images/litre.jpg" width="100%" height="auto">
+              <div class="card-body">
+                <h4 class="card-text">1.5 Litre of Softdrink</h4>
+                <p class="card-text">Php 109.00</p>
+                <div class="form-group mb-3">
+                  <label for="qty">Qty:</label>
+                  <input type="number" name="qty" min="1" max="5">
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group mx-auto">
+                    <button type="button" class="btn btn-danger col-12">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- JUICE -->
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img src="images/mango.jpg" width="100%" height="auto">
+              <div class="card-body">
+                <h4 class="card-text">Juice</h4>
+                <p class="card-text">Php 39.00</p>
+          <div class="form-group mb-3">
+            <label for="qty">Qty:</label>
+            <input type="number" name="qty" min="1" max="5">
+          </div>
+                <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group mx-auto">
+                    <button type="button" class="btn btn-danger col-12">Add to cart<span class="ml-2"><i class="fa fa-shopping-cart"></i></span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div> <!-- end ROW -->
+    </div> <!-- end TAB CONTENT -->
 
       <!-- BACK TO TOP -->
       <p class="float-right">
-        <a href="#"><span class="bg-dark text-white p-2 rounded-circle"><i class="fa fa-arrow-up"></i><span></a>
+        <a href="#"><span class="bg-danger text-white p-2 rounded-circle"><i class="fa fa-arrow-up"></i><span></a>
       </p>
 
 
-
-    </div><!--end TAB CONTENT -->
   </div><!-- end CONTAINER -->
 </div><!-- end ALBUM -->
 
