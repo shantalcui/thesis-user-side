@@ -122,10 +122,10 @@
             <div class="item-name">Tofu Rice Bowl</div>
             <div class="item-price">₱197</div>
 
-            <div class="item-qty mx-auto col" id="qty-container">
-              <button type="button" id="btn-minus" class="btn btn-sm">&minus;</button>
+            <div class="item-qty mx-auto col">
+              <button type="button" id="sub" class="btn btn-sm">&minus;</button>
               <input type="text" name="add" id="qty" class="outline-danger" value=1>
-              <button type="button" id="btn-plus" class="btn btn-sm">&plus;</button>
+              <button type="button" id="add" class="btn btn-sm">&plus;</button>
             </div>
 
             <div class="item-total mx-auto col">₱197.00</div>
@@ -147,9 +147,9 @@
             <div class="item-price">₱197</div>
 
             <div class="item-qty mx-auto col">
-              <button type="button" id="btnminus" class="btn btn-sm">&minus;</button>
-              <input type="number" name="add" id="valqty" class="outline-danger"  value="">
-              <button type="button" id="btnplus" class="btn btn-sm">&plus;</button>
+              <button type="button" id="sub" class="btn btn-sm">&minus;</button>
+              <input type="text" name="add" id="qty" class="outline-danger" value=1>
+              <button type="button" id="add" class="btn btn-sm">&plus;</button>
             </div>
 
             <div class="item-total mx-auto col">₱197.00</div>
@@ -171,9 +171,9 @@
             <div class="item-price">₱197</div>
 
             <div class="item-qty mx-auto col">
-              <button type="button" id="btnminus" class="btn btn-sm">&minus;</button>
-              <input type="number" name="add" id="valqty" class="outline-danger"  value="">
-              <button type="button" id="btnplus" class="btn btn-sm">&plus;</button>
+              <button type="button" id="sub" class="btn btn-sm">&minus;</button>
+              <input type="text" name="add" id="qty" class="outline-danger" value="1">
+              <button type="button" id="add" class="btn btn-sm">&plus;</button>
             </div>
 
             <div class="item-total mx-auto col">₱197.00</div>
@@ -199,21 +199,11 @@
     <p class="mb-1">&copy; 2020 Don Covido's</p>
   </footer>
 </div>
+
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
       <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-      <script src="cart.js"></script>
-      <script>
-        const plus = document.getElementById('btn-plus');
-
-        for(var i = 0; i < plus.length; i++){
-          let inc = plus[i];
-          inc.addEventListener(click, function(event) {
-            let btnClicked = event.target;
-            let input = btnClicked.parentElement.children[1];
-          })
-        };
-      </script>
+      <script src="js/cart.js"></script>
     
     </body>
 </html>

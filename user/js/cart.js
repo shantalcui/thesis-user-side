@@ -21,3 +21,20 @@
   }, false)
 }())
 
+
+let addBtn = document.querySelector('#add');
+let subBtn = document.querySelector('#sub');
+let qty = document.querySelector('#qty');
+
+addBtn.addEventListener('click', () => {
+  qty.value = parseInt(qty.value) + 1;
+});
+
+subBtn.addEventListener('click', () => {
+
+  if(qty.value > 1) {
+    qty.value = parseInt(qty.value) - 1;
+  } else {
+    qty.value = 1;
+  }
+});
