@@ -21,7 +21,7 @@
   }, false)
 }())
 
-
+// CART EVENTS
 let addBtn = document.querySelector('#add');
 let subBtn = document.querySelector('#sub');
 let qty = document.querySelector('#qty');
@@ -38,3 +38,8 @@ subBtn.addEventListener('click', () => {
     qty.value = 1;
   }
 });
+
+
+(function() {
+
+})
