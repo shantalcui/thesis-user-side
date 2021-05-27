@@ -44,5 +44,11 @@ let bin = document.querySelector('.remove');
 let order = document.querySelector('#submit');
 
 order.addEventListener('click', () => {
-  bin.disabled = true;
+  Swal.fire(
+    'The Internet?',
+    'That thing is still around?',
+    'question'
+  ).then(() => {
+    bin.disabled = true;
+  });
 });
