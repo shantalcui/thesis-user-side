@@ -24,6 +24,7 @@
 // INCREMENT DECREMENT QTY
 const addBtn = document.getElementsByClassName('add');
 const subBtn = document.getElementsByClassName('sub');
+
 // INCREMENT
 for(var i = 0; i < addBtn.length; i++) {
   const btn = addBtn[i];
@@ -33,6 +34,9 @@ for(var i = 0; i < addBtn.length; i++) {
     const inputValue = input.value;
     const newValue = parseInt(inputValue) + 1;
     input.value = newValue;
+
+    let total = document.getElementsByClassName('item-total');
+    console.log(total.innerHTML);
   })
 }
 // DECREMENT
@@ -53,13 +57,13 @@ for(var i = 0; i < subBtn.length; i++) {
 }
 
 // TOTAL
-const subtotal = getElementsByClassName('subtotal');
-console.log(subtotal);
+// const price = getElementsByClassName('item-price');
+// const qty = getElementsByClassName('item-qty').children[1];
+// let total = 0;
 
-let total = 0;
-for(let i = 0; i<cart.length; i+=1) {
-  total += cart[i].price * cart[i].qty
-}
+// for(let i = 0; i < subtotal.length; i+=1) {
+//   total += subtotal[i].price * subtotal[i].qty
+// }
 
 
 // let bin = document.querySelector('.remove');
