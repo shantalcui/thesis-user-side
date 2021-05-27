@@ -6,8 +6,8 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
-	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <title>Don Covido's | Bill Out</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/checkout/">
@@ -32,7 +32,7 @@
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href="form-validation.css" rel="stylesheet">
+    <link href="css/cart.css" rel="stylesheet">
   </head>
   
   <body class="bg-dark text-white">
@@ -40,7 +40,7 @@
   <nav class="navbar navbar-expand-md fixed-top bg-dark">
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" 
 		aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle Navigation">
-		  <i class="fas fa-bars"></i>
+		  <i class="fa fa-bars"></i>
 	  </button>
 	  
 	  <a class="navbar-brand text-white" href="#">Don Covido's</a>
@@ -58,38 +58,38 @@
 	  <div class="collapse navbar-collapse" id="navbarMenu">
 	    <ul class="navbar-nav mx-auto">
 		    <li class="nav-item">
-			   <a class="nav-link text-white" href="../menu/menu1.html">Menu</a>
+			   <a class="nav-link text-white" href="main.html">Menu</a>
 		    </li>
 		    <li class="nav-item">
-			   <a class="nav-link text-white" href="../about/about.html">About</a>
+			   <a class="nav-link text-white" href="about.html">About</a>
 		    </li>
 		    <li class="nav-item">
-			   <a class="nav-link text-white" href="../about/contact.html">Contact Us</a>
+			   <a class="nav-link text-white" href="contact.html">Contact Us</a>
 		    </li>
 		  </ul>
 	  </div>
 	
 	  <div class="d-block">
-	    <a href="../cart/cart.html">
+	    <a href="cart.html">
 	      <i class="fa fa-shopping-cart text-white mr-0"></i>
 		  <sup class="badge badge-pill badge-danger">0</sup>
 	    </a>
 	  </div>
 	  
-	    <a href="../cart/bill-out.html">
-		  <span class="mx-3"><i class="fas fa-credit-card text-white"></i></span>
+	    <a href="bill-out.html">
+		  <span class="mx-3"><i class="fa fa-credit-card-alt text-white"></i></span>
 	    </a>
 		
 	  <div class="dropdown">
 	    <button type="submit" class="btn btn-dark" data-toggle="dropdown" data-target=".dropdown-menu">
-		  <i class="fas fa-user-circle text-white"></i>
+		  <i class="fa fa-user-circle text-white"></i>
 	    </button>
 	  </div>
 	
 	  <div class="dropdown-menu dropdown-menu-right bg-dark">
 	    <h6 class="dropdown-header text-white">Customer's Username</h6>
 		<div class="dropdown-divider"></div>
-		<a class="dropdown-item text-light" href="#">Logout<a>
+		<a class="dropdown-item text-light" href="index.html">Logout<a>
 	  </div>
 	</nav>
 </header>
@@ -97,7 +97,6 @@
   <!-- RECEIPT -->
   <div class="container">
     <div class="pt-5 pb-3 text-center">
-      <!--<img class="d-block mx-auto mb-4" src="../images/logo.png" width="200" height="auto">-->
       <h1 class="mt-5">RECEIPT</h1> 
     </div>
 
@@ -106,13 +105,13 @@
         
         <ul class="receipt mb-3 bg-white">
           <h3 class="text-center pt-2 mb-0 mr-3 font-weight-bold">Don Covido's</h3>
-          <h6 class="bottom text-center pt-0 pb-2 mr-3">Southcrest vill., San Agustin 2, City of Dasmarinas</h6>
+          <h6 class="bottom text-center pt-0 pb-2 mr-3">San Agustin 2, City of Dasmarinas</h6>
 
-          <h6>OR#</h6>
-          <h6>CUSTOMER'S NAME:</h6>
-          <h6>MM/DD/YYYY  HH:MM:SS AM</h6>
-          <h6>TABLE #</h6>
-          <h6>CASHIER: PAU MAGBANUA</h6>
+          <h6>OR# 0000000001</h6>
+          <h6>CUSTOMER'S NAME: Juan dela Cruz</h6>
+          <h6>02/01/2020  10:34:29 AM</h6>
+          <h6>TABLE# 1</h6>
+          <h6>CASHIER: Maria dela Cruz</h6>
 
           <li class="bottom row d-flex mb-3 mr-3 justify-content-between lh-condensed">
             <div class="col-1 pt-3">
@@ -179,12 +178,12 @@
 
           <li class="row d-flex mr-3 justify-content-center">
             <h5 class=" col-12 text-center font-weight-bold">THANK YOU FOR DINNING WITH US!</h5>
-            <img src="../images/barcode.png" width="200" height="80" class="col-5  pb-3">
+            <img src="images/barcode.png" width="200" height="80" class="col-5  pb-3">
           </li>
         </ul>
 
       <div class="row justify-content-center">
-	    <button type="submit" class="btn btn-danger font-weight-bold col-12" onclick="document.location='../menu/menu1.html';">OK</button>
+	    <button type="submit" class="btn btn-danger font-weight-bold col-11 col-md-12" onclick="document.location='main.html';">OK</button>
 	  </div>
 
 
@@ -196,5 +195,5 @@
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="form-validation.js"></script></body>
+        </body>
 </html>

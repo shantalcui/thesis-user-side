@@ -21,34 +21,56 @@
   }, false)
 }())
 
-// CART EVENTS
-let addBtn = document.querySelector('#add');
-let subBtn = document.querySelector('#sub');
-let qty = document.querySelector('#qty');
+// INCREMENT DECREMENT QTY
+const addBtn = document.getElementsByClassName('add');
+const subBtn = document.getElementsByClassName('sub');
+// INCREMENT
+for(var i = 0; i < addBtn.length; i++) {
+  const btn = addBtn[i];
+  btn.addEventListener('click', () => {
+    const btnClicked = event.target;
+    const input = btnClicked.parentElement.children[1];
+    const inputValue = input.value;
+    const newValue = parseInt(inputValue) + 1;
+    input.value = newValue;
+  })
+}
+// DECREMENT
+for(var i = 0; i < subBtn.length; i++) {
+  const btn = subBtn[i];
+  btn.addEventListener('click', () => {
+    const btnClicked = event.target;
+    const input = btnClicked.parentElement.children[1];
+    const inputValue = input.value;
+    const newValue = parseInt(inputValue) - 1;
 
-addBtn.addEventListener('click', () => {
-  qty.value = parseInt(qty.value) + 1;
-});
+    if(inputValue > 1) {
+      input.value = newValue;
+    } else {
+      input.value = 1;
+    }
+  })
+}
 
-subBtn.addEventListener('click', () => {
+// TOTAL
+const subtotal = getElementsByClassName('subtotal');
+console.log(subtotal);
 
-  if(qty.value > 1) {
-    qty.value = parseInt(qty.value) - 1;
-  } else {
-    qty.value = 1;
-  }
-});
+let total = 0;
+for(let i = 0; i<cart.length; i+=1) {
+  total += cart[i].price * cart[i].qty
+}
 
 
-let bin = document.querySelector('.remove');
-let order = document.querySelector('#submit');
+// let bin = document.querySelector('.remove');
+// let order = document.querySelector('#submit');
 
-order.addEventListener('click', () => {
-  Swal.fire(
-    'The Internet?',
-    'That thing is still around?',
-    'question'
-  ).then(() => {
-    bin.disabled = true;
-  });
-});
+// order.addEventListener('click', () => {
+//   Swal.fire(
+//     'The Internet?',
+//     'That thing is still around?',
+//     'question'
+//   ).then(() => {
+//     bin.disabled = true;
+//   });
+// });
